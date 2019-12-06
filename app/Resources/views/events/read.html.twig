@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+   <h2 class="page-header">{{event.eventName}}</h2>
+
+   <img src="{{event.eventImage}}" style="width:200px;height:150px;">
+
+   <ul class="list-group">
+   	<li class="list-group-item"><b>Date & Time: </b>{{event.eventDate|date('F j, Y, g:i a')}}</li>
+   	<li class="list-group-item"><b>Contact: </b>{{event.eventContact}}</li>
+   	<li class="list-group-item"><b>Phone: </b>{{event.eventPhone}}</li>
+   	<li class="list-group-item"><b>Location: </b>{{event.eventAddress}}</li>
+   	<li class="list-group-item"><b>Web: </b>{{event.eventWeb}}</li>
+   	<li class="list-group-item"><b>Description: </b>{{event.eventDescription}}</li>
+   </ul>
+
+		<a href="/event/edit/{{event.id}}" class="btn btn-success">Edit</a>
+      	<a href="/event/delete/{{event.id}}" class="btn btn-danger">Delete</a></td>
+      	<a class="btn btn-primary" href="/">Back to events</a>
+
+{% endblock %}
+
+
+	
